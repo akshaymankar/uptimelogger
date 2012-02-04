@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -f /var/log/uptime.log ]; then
+    tail -1 /var/lof/uptime.log
+fi
+
+#TODO: 
+# - Add command line parsing to display last X uptime logs, use getopt to parse
+# - Add option to genrate graph, probable command line option -g
