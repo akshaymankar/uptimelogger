@@ -1,0 +1,4 @@
+/var/log/uptime.log {
+    rotate 5
+    weekly
+}

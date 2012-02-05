@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -f /var/log/uptime.log ]; then
+    uptime=`tail -1 /var/log/uptime.log | awk '{print $3}' | sed 's/,$//'`
+    IFS=: read -r h m <<< "$uptime"
+    echo "${h}h ${m}m"
+fi
+
+#TODO: 
+# - Add command line parsing to display last X uptime logs, use getopt to parse
+# - Add option to genrate graph, probable command line option -g
