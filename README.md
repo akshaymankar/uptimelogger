@@ -20,7 +20,6 @@ system.
 
 Copyright and Authors
 ---------------------
-Copyright (C) 2012  Akshay Mankar <itsakshaymankar@gmail.com>
-              2012  Muneeb Shaikh <iammuneeb@gmail.com>
+Copyright (C) 2012  Akshay Mankar <itsakshaymankar@gmail.com>, Muneeb Shaikh <iammuneeb@gmail.com>
 
 License GPLv2: GNU GPL version 2 <http://gnu.org/licenses/gpl2.html>.
