@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -f /var/log/uptime.log ]; then
-    tail -1 /var/log/uptime.log
+    uptime=`tail -1 /var/log/uptime.log | awk '{print $3}' | sed 's/,$//'`
+    IFS=: read -r h m <<< "$uptime"
+    echo "${h}h ${m}m"
 fi
 
 #TODO: 
