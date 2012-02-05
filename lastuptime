@@ -1,9 +1,21 @@
 #!/bin/bash
 
 if [ -f /var/log/uptime.log ]; then
-    uptime=`tail -1 /var/log/uptime.log | awk '{print $3}' | sed 's/,$//'`
-    IFS=: read -r h m <<< "$uptime"
-    echo "${h}h ${m}m"
+    uptime_secs=`tail -n1 /var/log/uptime.log | awk '{print $1}'`
+    updays=`echo  ${uptime_secs}/86400| bc`
+    upminutes=`echo ${uptime_secs}/60| bc`
+    uphours=`echo ${upminutes}/60| bc`
+    uphours=`echo ${uphours}%24|bc`
+    upminutes=`echo ${upminutes}%60|bc`
+
+    if [ ${updays} -ne 0 ]; then
+        echo ${updays}d ${uphours}h ${upminutes}m
+    else
+        echo ${uphours}h ${upminutes}m
+    fi
+
+else
+    echo "Please Reboot!"
 fi
 
 #TODO: 
