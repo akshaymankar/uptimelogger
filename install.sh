@@ -7,4 +7,5 @@ else
     cp uptimelogger.cron /etc/cron.d/uptimelogger
     cp uptimelogger.logrotate /etc/logrotate.d/uptimelogger
     cp lastuptime /usr/bin/
+    uptime > /var/log/uptime
 fi
