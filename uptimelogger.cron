@@ -1,4 +1,4 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot root cat /var/log/uptime >> /var/log/uptime.log
-* * * * * root uptime > /var/log/uptime
+* * * * * root cat /proc/uptime|awk '{print $1}' > /var/log/uptime
