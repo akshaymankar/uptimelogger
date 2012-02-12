@@ -50,8 +50,8 @@ int main(int argc,char *argv[])
     secs=time%60;
     if(days>0)
     {
-        printf("%d days ",days);
+        printf("%dd ",days);
     }
-    printf("%d hours %d minitues %d seconds\n",hours,mins,secs);
+    printf("%dh %dm\n",hours,mins,secs);
     return 0;
 }
