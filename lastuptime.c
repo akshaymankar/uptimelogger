@@ -52,6 +52,6 @@ int main(int argc,char *argv[])
     {
         printf("%dd ",days);
     }
-    printf("%dh %dm\n",hours,mins,secs);
+    printf("%dh %dm\n",hours,mins);
     return 0;
 }
